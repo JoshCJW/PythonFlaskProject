@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twitter Cataloger</title>
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static',
+        filename='style.css') }}">
+        
+</head>
+<body>
+<div class="outer-container">
+    <div class="header-bar">
+        <nav class="nav">
+        <!-- Navigation Bar -->
+ <div class="navbar">
+    <div class="navbarcontainer">
+    <img class="logo" src="/static/logo.png">
+    <h1>Twitter Cataloging System</h1>
+    <ul>
+        {% if current_user.is_authenticated != true%}
+        <li><a href={{url_for('register')}}>Register</a></li>
+        <li><a href={{url_for('index')}}>Login</a></li>
+        {% else %}
+        <li><a href={{url_for('catalog')}}>Catalog</a></li>
+        <li><a href={{url_for('dashboard')}}>Dashboard</a></li>
+        <li><a href={{url_for('upload')}}>Upload</a></li>
+        <li><a href={{url_for('logout')}}>Logout</a></li>
+        {% endif %}
+    </ul>
+    </div>
+</div>
+        </nav>
+    </div>
+    <div class="container">
+        
+        {% block sidebar %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+{% block catalogJS %}
+{% endblock %}
+{% block dashboardJS %}
+{% endblock %}
+</body>
+</html>

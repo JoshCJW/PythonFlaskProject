@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+{% block sidebar %}
+<div class="catalog_page_parent">
+ <!-- id Container-->
+ <div class="idcontainer">
+ <img class="logo" src="/static/personlogo.png">
+ <div class ="lblids">
+ <label><b>My id is: {{ email }} </b></label>
+ <br><br>
+ <label><b>My role is a cataloger</b></label>
+
+</div>
+</div>
+{% endblock %}
+
+ <!-- id Container end-->
+ {% block content %}
+
+ <!-- Catalog Container-->
+ <div class="Catalog">
+
+ <div class="Catalog_container">
+ <form  class="Catalogform" id="cform" method="post">    
+        <label for="when"><b>When</b></label>
+        <br>
+        <input type="date" name="itxtdate" id="itxtdate" style="width:410px">
+        <br><br>
+
+
+      <label for="who"><b>Who</b></label>
+      <br>
+      <textarea name="txtwho" id="itxtwho" rows="1" cols="50"></textarea>
+      <br><br>
+
+      <label for="comment"><b>Comment</b></label>
+      <br>
+
+      <textarea name="txtcomment" id="itxtcomment" rows="5" cols="50"></textarea>
+      <br><br>
+
+      <label for="about"><b>About</b></label>
+      <br>
+
+      <textarea name="txtabout" id="itxtabout" rows="1" cols="50"></textarea>
+      <br><br>
+
+      <label for="media"><b>Media</b></label>
+      <br>
+      <select name="mediatype" id="itxtmedia">
+        <option value="">--Please choose an option--</option>
+        <option value="text">text</option>
+        <option value="photo">photo</option>
+        <option value="video">video</option>
+    </select>
+      <br><br>
+
+      <label for="what"><b>What(hashtag)</b></label>
+
+      <br>
+
+      <textarea name="txtwhat" id="itxtwhat" rows="1" cols="50"></textarea>
+      <br><br>
+      <label for="whom"><b>Whom(user_mentions)</b></label>
+      <br>
+      <textarea name="txtwhom" id="itxtwhom" rows="1" cols="50"></textarea>
+      <br><br>
+
+      <label for="refid"><b>Reference ID</b></label>
+      <br>
+      <textarea name="txtrefid" id="itxtrefid" rows="1" cols="50"></textarea>
+      <br><br>
+
+      <button type="submit" class="csubmitbtn">Submit</button>
+      </form>
+  
+
+<!-- Table -->
+<div class="tablesum" id="sumtable">
+<h2>The following record has been entered</h2>
+<table id="summary">
+  <col style="width: 40%;" />
+
+  <col style="width: 60%;" />
+  <tr class="sumtr">
+    <th class="sumth1">Attribute</th>
+    <th class="sumth2">Value</th>
+  </tr>
+  <tr class="sumtr">
+    <td class="sumtd1" style="width:30px">When</td>
+    <td class="sumtd2" id="display_when" style="width:500px" ></td>
+  </tr>
+  <tr class="sumtr">
+    <td class="sumtd1" style="width:30px">Who</td>
+    <td class="sumtd2" id="display_who" style="width:500px"></td>
+  </tr>
+  <tr class="sumtr">
+    <td class="sumtd1" style="width:30px">Comment</td>
+    <td class="sumtd2" id="display_comment" style="width:500px"></td>
+  </tr>
+  <tr class="sumtr">
+    <td class="sumtd1" style="width:30px">About</td>
+    <td class="sumtd2" id="display_about" style="width:500px"></td>
+  </tr>
+  <tr>
+    <td class="sumtd1" style="width:30px">Media</td>
+    <td class="sumtd2" id="display_media" style="width:500px"></td>
+  </tr>
+  <tr class="sumtr">
+
+    <td class="sumtd1" style="width:30px">What</td>
+    <td class="sumtd2" id="display_what" style="width:500px"></td>
+  </tr>
+  <tr class="sumtr">
+    <td class="sumtd1" style="width:30px">Whom</td>
+    <td class="sumtd2" id="display_whom" style="width:500px"></td>
+  </tr>
+
+  <tr class="sumtr">
+    <td class="sumtd1" style="width:30px">Reference ID</td>
+    <td class="sumtd2" id="display_refid" style="width:500px"></td>
+  </tr>
+</table>
+
+<h2>The Total Count of Tweets for year <span id="when"></span> is <span id="count"></span> </h2>
+
+
+
+</div>
+
+<!-- Table End -->
+
+
+</div>
+
+ <!-- Catalog Container end-->
+ 
+
+</div>
+
+</body>
+{% endblock %}
+
+{% block catalogJS %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename='catalog.js')}}"></script>
+
+{% endblock %}
+
+
+
+</html>

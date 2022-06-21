@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+{% block content %}
+<body>
+ 
+  <!-- Register/Login Container-->
+ <div class="tab">
+  <button class="tablinks"><a href={{url_for('register')}}>Register</a></button>
+  <button class="tablinks" onclick="" id="active">Login</button>
+</div>
+
+    <!--Login form  -->
+    <div class="Login_container">
+      <div class="alert" role="alert">
+        <p style="color: red;">{{ message }}</p>  
+      </div>
+    <form action="" id="loginform" method="post">
+      
+        <label for="email"><b>Enter your email: </b></label>
+        <input type="text" name="Loginemail" id="Loginemail" required>
+
+        <label for="psw"><b>Enter your password:</b></label>
+        <input type="password" name="Loginpsw" id="Loginpsw" required>
+
+        <button type="submit" class="Loginbtn">Login</button>
+      </div>
+      
+      
+    </form>
+    <!--Login form end  -->
+
+
+    
+</body>
+{% endblock %}
+</html>

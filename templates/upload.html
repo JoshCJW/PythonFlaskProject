@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+</head>
+
+<body>
+
+{% block sidebar %}
+
+<div class="upload_page_parent">
+    <!-- id Container-->
+    <div class="idcontainer">
+    <img class="logo" src="/static/personlogo.png">
+    <div class ="lblids">
+    <label><b>My id is: {{ email }} </b></label>
+    <br><br>
+    <label><b>My role is a cataloger</b></label>
+   
+   </div>
+   </div>
+    <!-- id Container end-->
+{% endblock %}
+{% block content %}
+
+    <!-- Upload Container-->
+    <div class="upload">
+        <h1>Upload Twitter Catalog Data</h1>
+        <div class="alert" role="alert">
+          <p style="color: red;">{{ message }}</p>  
+        </div>
+        <form action="" id="uploadform" method="post">
+      
+            <label for="uploadlbl"><b>Upload CSV file </b></label>
+            <br>
+            <input type ="file" name="fileupload" accept=".csv"/>
+            <br><br>
+            <button type="submit" class="uploadbtn">Upload</button>
+          </div>
+          
+          
+        </form>
+
+
+    </div>
+      
+</div>
+     
+</body>
+{% endblock %}
+
+</html>

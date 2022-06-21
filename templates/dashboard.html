@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Twitter Catloging System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  
+</head>
+<body>
+    
+{% block sidebar %}
+
+<div class="catalog_page_parent">
+ <!-- id Container-->
+ <div class="idcontainer">
+ <img class="logo" src="/static/personlogo.png">
+ <div class ="lblids">
+ <label><b>My id is: {{ email }} </b></label>
+ 
+ <br><br>
+ <label><b>My role is a cataloger</b></label>
+
+</div>
+
+<h5 id="dashboardsidehead">Select Period</h5>
+<select name="years" id="years" onchange="chartbymonth()">
+  <option value="all">All</option>
+
+</select>
+</div>
+{% endblock %}
+
+ <!-- id Container end-->
+ {% block content %}
+
+ <!-- Catalog Container-->
+ <div class="dashboard">
+
+ <div class="dashboard_container" id="dashboardcontainer">
+ 
+<h1 style="text-align: center;">The Twitter Trending </h1>
+<canvas id="barChart" width="400" height="400"></canvas>
+
+
+</div>
+
+<!-- Table End -->
+
+
+</div>
+
+ <!-- Catalog Container end-->
+ 
+
+</div>
+
+</body>
+{% endblock %}
+{% block dashboardJS %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='dashboard.js')}}"></script>
+{% endblock %}
+
+
+</html>

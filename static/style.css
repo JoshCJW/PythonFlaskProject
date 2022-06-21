@@ -1,0 +1,325 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+
+.hidden {
+  display:none;
+}
+
+a, a:visited
+{
+  color:inherit;
+  text-decoration:none;
+
+}
+/* Navbar */
+
+.navbar {
+
+    background-color:#d3c368;
+    overflow: hidden;
+    height: 100px;
+    margin: -10px;
+}
+.navbarcontainer {
+    position: relative;
+}
+.navbar h1 {
+    margin: 0;
+    float: left;
+    padding : 20px 40px 0px 40px;
+}
+.navbar ul li {
+
+    display: inline;
+    list-style-type: none;
+    float: left;
+    padding: 30px 0px 0px 60px;
+
+}
+.navbar a {
+    text-decoration: none;
+    padding: 0px 16px 10px;
+    text-align: center;
+    display: inline;
+}
+.logo {
+    width:80px;
+    height: 80px;
+    padding: 0px 50px 0px 50px;
+    float: left;
+}
+
+
+
+/* Navbar End */
+/* Register and Login*/
+.tab {
+  padding-top: 30px;
+  padding-left: 100px;
+  
+
+}
+
+
+.tab button {
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  border:none;
+  border-bottom-width: 40px;
+  border-bottom:1px solid #c2bebe;
+  font-size: 20px;
+  background-color: transparent;
+
+
+
+}
+
+.tab button:hover {
+  border-bottom: 5px solid;
+  border-color: #d3c368;
+}
+
+.tab button.active {
+  border-bottom: 5px solid;
+  border-color: #d3c368;
+}
+
+#active {
+  border-bottom: 5px solid;
+  border-color: #d3c368;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+
+  
+
+.Register_container {
+    padding: 16px;
+    background-color: white;
+    width:40%;
+    margin:auto;
+    padding-top:100px;
+    padding-right:900px;
+
+  }
+
+
+  .Login_container {
+    padding: 16px;
+    background-color: white;
+    width:40%;
+    margin:auto;
+    padding-top:120px;
+    padding-right:900px;
+
+  }
+input[type=text], input[type=password] {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: white;
+
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgb(81, 238, 128);
+
+
+  }
+  #registerform input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: white;
+  }
+  #loginform input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: white;
+  }
+
+
+  .registerbtn {
+    background-color: brown;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+    background-color: green;
+    cursor: pointer;
+
+  }
+  .Loginbtn {
+    background-color: brown;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+  }
+  .Loginbtn:hover {
+    opacity: 1;
+    background-color:green;
+    cursor: pointer;
+  }
+    
+  
+  .Register_container a {
+    color: dodgerblue;
+  }
+  .Login_container a {
+    color: dodgerblue;
+  }
+/* Register and Login */
+
+/* Catalog */
+.catalog_page_parent {
+  display: flex;
+}
+.idcontainer {
+  padding-top:50px;
+  margin-left:500px;
+}
+.lblids {
+  margin-right: 100px;
+  margin-top: 100px;
+}
+.Catalogform {
+  margin-left:50px;
+}
+.Catalog {
+  padding-top:40px;
+  flex:1;
+}
+.Catalog_container {
+  width:40%;
+  border: 1px solid;
+  padding: 30px 200px 60px 60px;
+  box-shadow: #d3c368 0px 5px 15px;
+}
+
+.csubmitbtn {
+  background-color: brown;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+  margin-left: 150px;
+  text-align: center;
+}
+
+.csubmitbtn:hover {
+  opacity: 1;
+  background-color:green;
+  cursor: pointer;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 3px double black;
+  text-align: left;
+  padding: 8px;
+
+}
+#sumtable h2 {
+  text-align: center;
+}
+#sumtable {
+  width:130%;
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+/* Upload */
+.upload_page_parent {
+  display: flex;
+}
+.uploadform {
+  margin-left:50px;
+}
+.upload {
+  padding-top:40px;
+  flex:1;
+}
+.upload_container {
+  width:40%;
+  padding: 30px 200px 60px 60px;
+}
+
+.uploadbtn {
+  background-color: brown;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  /* margin-left: 150px; */
+  text-align: center;
+}
+
+.uploadbtn:hover {
+  opacity: 1;
+  background-color:green;
+  cursor: pointer;
+}
+
+/* Upload End */
+
+/* Dashboard */
+
+.dashboard {
+  padding-top:40px;
+  flex:1;
+}
+.dashboard_container {
+  width:40%;
+ 
+}
+#dashboardsidehead {
+ padding-left: 35px; 
+ padding-top: 100px;
+}
+#years {
+  width: 150px;
+}
+/* Dashboard end */
